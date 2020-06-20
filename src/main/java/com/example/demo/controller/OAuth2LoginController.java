@@ -42,16 +42,6 @@ public class OAuth2LoginController {
 		}
 		return "redirect:/login";
 	}
-	
-	@GetMapping("/success")
-	public String sucess(Model model, @RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient authorizedClient,
-			@AuthenticationPrincipal OAuth2User oauth2User) {
-
-		model.addAttribute("userName", oauth2User.getName());
-		model.addAttribute("clientName", authorizedClient.getClientRegistration().getClientName());
-		model.addAttribute("userAttributes", oauth2User.getAttributes());
-		return "index";
-	}
 
 	@PostMapping("/logout")
 	public String logoutPage(HttpServletRequest request, HttpServletResponse response) {

@@ -42,7 +42,7 @@ public class OAuth2LoginConfig extends WebSecurityConfigurerAdapter {
 				.clientSecret("-- insert client secret --") // insert client secret
 				.clientAuthenticationMethod(ClientAuthenticationMethod.BASIC)
 				.authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
-				.scope("openid", "profile", "email", "https://www.googleapis.com/auth/drive.file")
+				.scope("openid", "profile", "email", "https://www.googleapis.com/auth/drive.file") //add your scopes here
 				.redirectUriTemplate("{baseUrl}/login/oauth2/code/{registrationId}")
 				.authorizationUri("https://accounts.google.com/o/oauth2/v2/auth")
 				.tokenUri("https://www.googleapis.com/oauth2/v4/token")
