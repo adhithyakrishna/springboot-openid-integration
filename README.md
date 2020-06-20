@@ -5,3 +5,4 @@ This project provides the boiler plate code for anyone who wants to use google o
 
 This code automatically fetches the access token, refreshes the token if the old token expires and can be Autowired to **Oauth2TokenService** to be used across the project. 
 
+![Open id authorisation](images/image.png)
